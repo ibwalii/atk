@@ -1,0 +1,10 @@
+.bg-light {
+    background-color: rgba(61, 61, 202, 0.938) !important;
+    margin-bottom: 30px;
+  }
+  .navbar-light .navbar-brand {
+    color: rgba(247, 242, 242, 0.9);
+  }
+  /* .navbar-light .navbar-nav .nav-link {
+    color: rgb(247, 239, 239, 1.0);
+  } */

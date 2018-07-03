@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-12">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="row">
+        <div class="col-md-5 form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" name="name" id="name" [ngModel] required #name = "ngModel">
+          <p *ngIf="!name.valid && name.touched"> required</p> 
+        </div>
+        <div class="col-md-2 form-group">
+          <label for="amount">Amount</label>
+          <input type="number" class="form-control" name="amount" id="amount" [ngModel] required #amount = "ngModel">
+          <p *ngIf="amount.invalid && amount.touched"> required</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <button class="btn btn-success" type="submit" [disabled]="!f.valid">{{ !editMode ? 'Add': 'Update' }}</button>
+          <button class="btn btn-danger" type="button" (click)="onDelete()" [disabled]="!editMode">Delete</button>
+          <button class="btn btn-info" type="button" (click)="onClear()">Clear</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
